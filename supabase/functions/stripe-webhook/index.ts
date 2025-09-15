@@ -38,7 +38,7 @@ serve(async (req)=>{
         }
       });
     }
-    const webhookSigningSecret = 'whsec_RFws6VrUkHmgd00Q5FHZMNwMmQmamXKM';
+    const webhookSigningSecret = 'secret';
     let event;
     try {
       event = await stripe.webhooks.constructEventAsync(body, signature, webhookSigningSecret);
